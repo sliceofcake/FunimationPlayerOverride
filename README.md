@@ -20,5 +20,5 @@ Why this works
 Recently [end of 2016, beginning of 2017], Funimation decided to redo their website and, for whatever reason, decided to use an HTML5 video player instead of their traditional Flash video player. This allows for customer scripting - abilities that were previously made difficult because the video was sitting behind Flash.  
   
 Touchy notes:  
-• This script makes some assumptions about how Funimation's video player is laid out. If this changes in the future, this script will likely not work until it is revised.  
+• This script makes some assumptions about how Funimation's video player is laid out. If the layout changes in the future, this script will likely not work as intended until it is revised.  
 • This script was tested narrowly on a Macbook Pro running Chrome. Different browsers / operating systems / screen sizes may yield unintended results.  
