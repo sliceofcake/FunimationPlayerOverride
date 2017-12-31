@@ -17,7 +17,7 @@ Remember that you already have some shortcuts:
 You can also create a bookmark with the URL/link being the funimationPlayerOverride.txt text. Then, whenever you click on the bookmark, it will run the script. Bookmarks that run JavaScript instead of going to a webpage are called bookmarklets.  
   
 Why this works  
-Recently [end of 2016, beginning of 2017], Funimation decided to redo their website and, for whatever reason, decided to use an HTML5 video player instead of their traditional Flash video player. This allows for customer scripting - abilities that were previous made difficult because the video was sitting behind Flash.  
+Recently [end of 2016, beginning of 2017], Funimation decided to redo their website and, for whatever reason, decided to use an HTML5 video player instead of their traditional Flash video player. This allows for customer scripting - abilities that were previously made difficult because the video was sitting behind Flash.  
   
 Touchy notes:  
 • This script makes some assumptions about how Funimation's video player is laid out. If this changes in the future, this script will likely not work until it is revised.  
