@@ -14,7 +14,7 @@ Remember that you already have some shortcuts:
 • [up] increase volume  
 • [down] decrease volume  
   
-You can also create a bookmark with the URL/link being the funimationAssistBookmarklet.txt text. Then, whenever you click on the bookmark, it will run the script. Bookmarks that run JavaScript instead of going to a webpage are called bookmarklets.  
+You can also create a bookmark with the URL/link being the funimationPlayerOverride.txt text. Then, whenever you click on the bookmark, it will run the script. Bookmarks that run JavaScript instead of going to a webpage are called bookmarklets.  
   
 Why this works  
 Recently [end of 2016, beginning of 2017], Funimation decided to redo their website and, for whatever reason, decided to use an HTML5 video player instead of their traditional Flash video player. This allows for customer scripting - abilities that were previous made difficult because the video was sitting behind Flash.  
