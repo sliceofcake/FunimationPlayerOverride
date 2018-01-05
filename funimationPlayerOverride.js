@@ -75,7 +75,7 @@
 			//break;case p.kye._ : p.evb(ev);p.elv.paused?p.elv.play():p.elv.pause();
 			break;case p.kye.l : p.evb(ev);p.elv.currentTime -=  1;
 			break;case p.kye.r : p.evb(ev);p.elv.currentTime +=  1;
-			break;case p.kye.s : p.evb(ev);p.elv.currentTime += 90;
+			break;case p.kye.s : p.evb(ev);p.elv.currentTime += 85;
 			//break;case p.kye.u : p.evb(ev);p.elv.volume += 0.1;
 			//break;case p.kye.d : p.evb(ev);p.elv.volume -= 0.1;
 			break;case p.kye.f : p.evb(ev);p.qd(p.doc,"#funimation-control-fullscreen").click();}};})(p));

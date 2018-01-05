@@ -7,7 +7,7 @@ Run this JavaScript in your browser when viewing a Funimation video player page 
 • new keyboard shortcut: [f] toggle fullscreen  
 • new keyboard shortcut: [left] skip backward by 1s  
 • new keyboard shortcut: [right] skip forward by 1s  
-• new keyboard shortcut: [s] skip forward by 1m:30s, which is the length of OPs and EDs  
+• new keyboard shortcut: [s] skip forward by 1m:25s, which is 5 seconds less than the length of OPs and EDs  
   
 Remember that you already have some shortcuts:  
 • [space] play/pause  
