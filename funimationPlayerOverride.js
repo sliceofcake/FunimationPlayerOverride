@@ -4,18 +4,22 @@
 		vis : true,
 		// height previous
 		h : 0,
+		// whether to temporarily show the mouse around the time of mouse movement even if it's hidden
+		mouseShowF : false,
+		//
+		mouseShowDelayHandle : null,
 		// generate style text
-		gst : function(vis){
-			this.vis = vis;
+		gst : function(){
 			return ""
 			+" @import url('https://fonts.googleapis.com/css?family=Open+Sans:700');"
-			+(vis?"":".funimation-player-override-hidden {display:none !important;}")
+			+(this.vis?"":".funimation-player-override-hidden {display:none !important;}")
+			+((this.vis||this.mouseShowF)?"":"* {cursor:none !important;}")
 			+" .funimation-player-override-subtitle>div>div {width:100% !important;height:auto !important;bottom:0px !important;top:unset !important;}"
 			+" .funimation-player-override-subtitle>div>div>div {font-family:'Open Sans',sans-serif !important;line-height:1.2em !important;letter-spacing:-0.025em !important;font-size:"+(this.h*0.0475)+"px;font-weight:700 !important;color:white !important;background-color:transparent !important;text-stroke:0em black !important;-webkit-text-stroke:0em black !important;text-shadow:0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black !important;}"
 			+" .vjs-text-track-display {bottom:"+(this.h*0.0675)+"px !important;}" // originally 3em
 			+" #funimation-gradient {display:none !important;}";},
 		// assert style
-		ast : function(){this.qd(this.doc,"#funimation-player-override-style").textContent = p.gst(!p.vis);},
+		ast : function(){this.qd(this.doc,"#funimation-player-override-style").textContent = p.gst();},
 		// event-block
 		evb : function(ev){ev.stopPropagation();ev.preventDefault();},
 		// key enun
@@ -49,8 +53,16 @@
 	p.doc.head.appendChild(el);
 	p.ast();
 	
+	// mousemove will temporarily show mouse if it's hidden
+	p.doc.addEventListener("mousemove",(function(p){return function(ev){
+		p.mouseShowF = true;
+		p.ast();
+		clearTimeout(p.mouseShowDelayHandle);
+		p.mouseShowDelayHandle = setTimeout((function(p){return function(){p.mouseShowF = false;p.ast();};})(p),500);};})(p));
+	
 	// mousedown will show/hide clutter
 	p.elv.addEventListener("mousedown",(function(p){return function(ev){
+		p.vis = !p.vis;
 		p.ast();};})(p));
 	
 	// keydown will block default events such as scroll
