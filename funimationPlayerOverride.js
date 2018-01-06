@@ -38,7 +38,7 @@
 	
 	// check for resizes occasionally
 	setInterval((function(p){return function(){
-		if (p.h !== p.elv.clientHeight){
+		if (p.h !== p.elv.clientHeight){p.h = p.elv.clientHeight;
 			var wMultN = p.elv.clientWidth  / p.elv.videoWidth ;
 			var hMultN = p.elv.clientHeight / p.elv.videoHeight;
 			p.hVideo = p.elv.videoHeight * Math.min(wMultN,hMultN);
