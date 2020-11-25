@@ -16,12 +16,13 @@
 		gst : function(){
 			return ""
 			+" @import url('https://fonts.googleapis.com/css?family=Open+Sans:700');"
-			+(this.vis ? "" : ".funimation-player-override-hidden {display:none !important;}")
-			+((this.vis || this.mouseShowF) ? "" : "* {cursor:none !important;}")
+			+(this.vis ? "" : " .funimation-player-override-hidden {display:none !important;}")
+			+((this.vis || this.mouseShowF) ? "" : " * {cursor:none !important;}")
 			+" .funimation-player-override-subtitle>div>div {width:100% !important;height:auto !important;bottom:0px !important;top:unset !important;}"
 			+" .funimation-player-override-subtitle>div>div>div {font-family:'Open Sans',sans-serif !important;line-height:1.2em !important;letter-spacing:-0.025em !important;font-size:"+(this.hVideo * 0.0527)+"px;font-weight:700 !important;color:white !important;background-color:transparent !important;text-stroke:0em black !important;-webkit-text-stroke:0em black !important;text-shadow:0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black,0px 0px 0.2em black !important;}"
 			+" .vjs-text-track-display {bottom:"+(this.bottomGap + (this.hVideo * 0.0194))+"px !important;}" // originally 3em
-			+" #funimation-gradient {display:none !important;}";},
+			+" #funimation-gradient {display:none !important;}"
+			+(this.vis ? "" : " #funimation-logo {display:none !important;}");},
 		// assert style
 		ast : function(){this.qd(this.doc,"#funimation-player-override-style").textContent = p.gst();},
 		// event-block
